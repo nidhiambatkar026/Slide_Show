@@ -1,4 +1,26 @@
-body{
-    margin: 0;
-    padding: 0;
+.container{
+    width: fit-content;
+    margin: 150px auto;
+    position: relative;
+}
+.Slide{
+    height: 500px;
+    width: 800px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+.symbols{
+    position: absolute;
+    height: 50px;
+}
+.symbols:hover{
+    cursor: pointer;
+    transform: scale(1.1);
+}
+.previous{
+    left: -55px;
+    top: 200px;
+}
+.next{
+    top: 200px;
 }
