@@ -22,6 +22,10 @@
         position: absolute;
         height: 50px;
     }
+    .symbols:hover{
+        cursor: pointer;
+        transform: scale(1.1);
+    }
     .previous{
         left: -55px;
         top: 200px;
@@ -33,10 +37,36 @@
 
 <body>
     <div class="container">
-        <img src="./Images/bird_1.jpg" alt="bird_1" class="Slide">
+        <img src="./Images/bird_1.jpg" alt="bird_1" class="Slide" id="slide">
         
-        <img src="./Images/backward-arrow.png" alt="backward-arrow" class="symbols previous"/>
-        <img src="./Images/Forward.png" alt="Forward" class="symbols next"/>
+        <img src="./Images/backward-arrow.png" alt="backward-arrow" class="symbols previous" onclick="prev()"/>
+        <img src="./Images/Forward.png" alt="Forward" class="symbols next" onclick="next()"/>
     </div>
+    <script>
+        const images = ["./Images/bird_1.jpg","./Images/bird_2.jpg","./Images/bird_3.jpg","./Images/bird_4.jpg","./Images/bird_5.jpg"];
+        let index = 0;
+        const slide = document.getElementById('slide');
 
+        function next(){
+            if(index < images.length-1){
+            index++;
+            }
+            else{
+                index= 0;
+            }
+            slide.src= images[index];
+        }
+        function prev(){
+            if(index > 0){
+                index--;
+            }
+            else{
+                index = images.length-1;
+            }
+            slide.src = images[index];
+            
+        }
+        setInterval(next , 3000);
+    </script>
+    </body>
 </html>
