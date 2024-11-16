@@ -10,6 +10,7 @@
     .container{
         width: fit-content;
         margin: 150px auto;
+        position: relative;
     }
     .Slide{
         height: 500px;
@@ -17,11 +18,25 @@
         object-fit: cover;
         border-radius: 20px;
     }
+    .symbols{
+        position: absolute;
+        height: 50px;
+    }
+    .previous{
+        left: -55px;
+        top: 200px;
+    }
+    .next{
+        top: 200px;
+    }
 </style>
 
 <body>
     <div class="container">
         <img src="./Images/bird_1.jpg" alt="bird_1" class="Slide">
+        
+        <img src="./Images/backward-arrow.png" alt="backward-arrow" class="symbols previous"/>
+        <img src="./Images/Forward.png" alt="Forward" class="symbols next"/>
     </div>
 
 </html>
